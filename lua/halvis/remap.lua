@@ -16,3 +16,8 @@ vim.keymap.set("n", "<C-A-Right>", "<C-w>l")
 -- Move text up and down
 vim.keymap.set("n", "<A-Up>", ":m .-2<CR>==")
 vim.keymap.set("n", "<A-Down>", ":m .+1<CR>==")
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
+-- Greatest remap ever
+vim.keymap.set("x", "<leader>p", "\"_dP")
