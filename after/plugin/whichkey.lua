@@ -61,10 +61,9 @@ local config = {
         },
         t = {
             name = "Terminal",
-            k = { "<cmd>ToggleTerm direction=float<cr>", "Terminal float" },
-            l = { "<cmd>ToggleTerm direction=vertical<cr>", "Terminal left" },
-            j = { "<cmd>ToggleTerm direction=horizontal<cr>", "Terminal bottom" },
-            h = { "<cmd>ToggleTerm direction=tab<cr>", "Terminal tab" },
+            f = { "<cmd>ToggleTerm direction=float<cr>", "Terminal float" },
+            b = { "<cmd>ToggleTerm direction=horizontal<cr>", "Terminal bottom" },
+            t = { "<cmd>ToggleTerm<cr>", "Toggle" },
         },
         u = {
             name = "Utilities",

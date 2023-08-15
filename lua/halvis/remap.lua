@@ -3,7 +3,7 @@ vim.g.mapleader = " "
 -- Better window navigation --
 vim.keymap.set("n", "<C-A-Left>", "<C-w>h")
 vim.keymap.set("n", "<C-A-Down>", "<C-w>j")
-vim.keymap.set("n", "<C-A-Uo>", "<C-w>k")
+vim.keymap.set("n", "<C-A-Up>", "<C-w>k")
 vim.keymap.set("n", "<C-A-Right>", "<C-w>l")
 
 -- Move text up and down
