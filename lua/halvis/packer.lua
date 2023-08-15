@@ -42,4 +42,5 @@ return require('packer').startup(function(use)
             require('treesj').setup({ --[[ your config ]] })
         end,
     })
+    use('f-person/git-blame.nvim')
 end)

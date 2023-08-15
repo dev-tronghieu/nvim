@@ -1,33 +1,32 @@
 local config = {
-	setup = {
-		icons = {
-			breadcrumb = "»",
-			separator = "➜",
-			group = " ",
-		},
-	},
-	opts = {
-		mode = "n",
-		prefix = "<leader>",
-		buffer = nil,
-		silent = true,
-		noremap = true,
-		nowait = true,
-	},
-	maps = {
+    setup = {
+        icons = {
+            breadcrumb = "»",
+            separator = "➜",
+            group = " ",
+        },
+    },
+    opts = {
+        mode = "n",
+        prefix = "<leader>",
+        buffer = nil,
+        silent = true,
+        noremap = true,
+        nowait = true,
+    },
+    maps = {
         c = { "<cmd>BufferKill<cr>", "Close Buffer" },
         e = { "<cmd>Ex<cr>", "Explorer" },
         h = { [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], "Replace all" },
         p = { "\"_dP", "Paste without copy" },
         q = { "<cmd>q!<cr>", "Quit" },
-        u = { "<cmd>UndotreeToggle<cr>", "Undo" },
         w = { "<cmd>up<cr>", "Save" },
         b = {
             name = "Buffer",
-            j = { "<cmd>BufferLinePick<CR>", "Jump" },
-            w = { "<cmd>BufferWipeout<CR>", "Wipeout" },
-            h = { "<cmd>BufferLineCloseLeft<CR>", "Close all to the left" },
-            l = { "<cmd>BufferLineCloseRight<CR>", "Close all to the right" },
+            j = { "<cmd>BufferLinePick<cr>", "Jump" },
+            w = { "<cmd>BufferWipeout<cr>", "Wipeout" },
+            h = { "<cmd>BufferLineCloseLeft<cr>", "Close all to the left" },
+            l = { "<cmd>BufferLineCloseRight<cr>", "Close all to the right" },
         },
         f = {
             name = "Finder",
@@ -36,44 +35,48 @@ local config = {
             s = {
                 function()
                     require('telescope.builtin')
-                    .grep_string({ search = vim.fn.input("Grep > ") })
+                        .grep_string({ search = vim.fn.input("Grep > ") })
                 end,
                 "Search"
             }
         },
         g = {
             name = "Git",
+            l = { "<cmd>GitBlameOpenFileURL<cr>", "Open line url" },
+            c = { "<cmd>GitBlameOpenCommitURL<cr>", "Open commit url" },
+            C = { "<cmd>GitBlameCopySHA<cr>", "Copy commit SHA" },
         },
         l = {
-			name = "LSP",
-			a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
-			e = { "<cmd>Telescope diagnostics bufnr=0<CR>", "Document Dianogstics" },
-			f = { "<cmd>lua vim.lsp.buf.format({async = false, timeout_ms = 10000})<CR>", "Format" },
-			l = { "<cmd>LspInfo<CR>", "Info" },
-			r = { "<cmd>lua vim.lsp.buf.rename()<CR>", "Rename" },
-			i = { "<cmd>Telescope lsp_references<CR>", "References" },
-			I = { "<cmd>Telescope lsp_implementations<CR>", "Implementations" },
-			d = { "<cmd>Telescope lsp_definitions<CR>", "Definitions" },
-			D = { "<cmd>Telescope lsp_type_definitions<CR>", "Type definitions" },
-			s = { "<cmd>Telescope lsp_document_symbols<CR>", "Document Symbols" },
-		},
-		t = {
-			name = "Terminal",
-			k = { "<cmd>ToggleTerm direction=float<CR>", "Terminal float" },
-			l = { "<cmd>ToggleTerm direction=vertical<CR>", "Terminal left" },
-			j = { "<cmd>ToggleTerm direction=horizontal<CR>", "Terminal bottom" },
-			h = { "<cmd>ToggleTerm direction=tab<CR>", "Terminal tab" },
-		},
+            name = "LSP",
+            a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
+            e = { "<cmd>Telescope diagnostics bufnr=0<cr>", "Document Dianogstics" },
+            f = { "<cmd>lua vim.lsp.buf.format({async = false, timeout_ms = 10000})<cr>", "Format" },
+            l = { "<cmd>LspInfo<cr>", "Info" },
+            r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
+            i = { "<cmd>Telescope lsp_references<cr>", "References" },
+            I = { "<cmd>Telescope lsp_implementations<cr>", "Implementations" },
+            d = { "<cmd>Telescope lsp_definitions<cr>", "Definitions" },
+            D = { "<cmd>Telescope lsp_type_definitions<cr>", "Type definitions" },
+            s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
+        },
+        t = {
+            name = "Terminal",
+            k = { "<cmd>ToggleTerm direction=float<cr>", "Terminal float" },
+            l = { "<cmd>ToggleTerm direction=vertical<cr>", "Terminal left" },
+            j = { "<cmd>ToggleTerm direction=horizontal<cr>", "Terminal bottom" },
+            h = { "<cmd>ToggleTerm direction=tab<cr>", "Terminal tab" },
+        },
         u = {
             name = "Utilities",
             j = { "<cmd>TSJToggle<cr>", "Toggle Splitting & Joining" },
+            u = { "<cmd>UndotreeToggle<cr>", "Undo" },
         },
         v = {
             name = "View Split",
             v = { "<cmd>vs<cr>", "Split vertical" },
             h = { "<cmd>sp<cr>", "Split horizontal" },
         },
-	},
+    },
 }
 
 local whichkey = require("which-key")
