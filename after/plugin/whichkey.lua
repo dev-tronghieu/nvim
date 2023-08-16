@@ -15,12 +15,9 @@ local config = {
         nowait = true,
     },
     maps = {
+        [","] = { "<cmd>BufferLineCyclePrev<cr>", "Prev Buffer" },
+        ["."] = { "<cmd>BufferLineCycleNext<cr>", "Next Buffer" },
         ["/"] = { "<Plug>(comment_toggle_linewise_current)", "Comment toggle current line" },
-        ["<Down>"] = { "<C-w>l", "Navigate down" },
-        ["<Left>"] = { "<C-w>h", "Navigate left" },
-        ["<Right>"] = { "<C-w>l", "Navigate right" },
-        ["<Up>"] = { "<C-w>k", "Navigate up" },
-        c = { "<cmd>BufferKill<cr>", "Close Buffer" },
         e = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
         E = { "<cmd>Ex<cr>", "Explorer" },
         h = { [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], "Replace all" },
@@ -28,10 +25,10 @@ local config = {
         s = { "<cmd>up<cr>", "Save" },
         b = {
             name = "Buffer",
-            j = { "<cmd>BufferLinePick<cr>", "Jump" },
-            w = { "<cmd>BufferWipeout<cr>", "Wipeout" },
-            h = { "<cmd>BufferLineCloseLeft<cr>", "Close all to the left" },
-            l = { "<cmd>BufferLineCloseRight<cr>", "Close all to the right" },
+            r = { "<cmd>BufferLineSortByDirectory<cr>", "Re-ordering" },
+            p = { "<cmd>BufferLinePick<cr>", "Pick" },
+            P = { "<cmd>BufferLinePickClose<cr>", "Pick Close" },
+            C = { "<cmd>BufferLineCloseOthers<cr>", "Close others" },
         },
         f = {
             name = "Finder",
@@ -81,6 +78,13 @@ local config = {
             name = "View Split",
             v = { "<cmd>vs<cr>", "Split vertical" },
             h = { "<cmd>sp<cr>", "Split horizontal" },
+        },
+        w = {
+            name = "Window",
+            ["<Down>"] = { "<C-w>l", "Navigate down" },
+            ["<Left>"] = { "<C-w>h", "Navigate left" },
+            ["<Right>"] = { "<C-w>l", "Navigate right" },
+            ["<Up>"] = { "<C-w>k", "Navigate up" },
         },
     },
 }
