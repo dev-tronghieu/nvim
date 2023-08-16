@@ -41,4 +41,10 @@ return require('packer').startup(function(use)
     use { "windwp/nvim-autopairs", config = function() require("nvim-autopairs").setup {} end }
     use { 'numToStr/Comment.nvim' }
     use { 'lewis6991/gitsigns.nvim' }
+    use {
+        'nvim-tree/nvim-tree.lua',
+        requires = {
+            'nvim-tree/nvim-web-devicons', -- optional
+        },
+    }
 end)
