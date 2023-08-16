@@ -33,17 +33,12 @@ return require('packer').startup(function(use)
         config = function()
             vim.o.timeout = true
             vim.o.timeoutlen = 100
-        end
-    }
-    use({
-        'Wansmer/treesj',
-        requires = { 'nvim-treesitter' },
-        config = function()
-            require('treesj').setup({ --[[ your config ]] })
         end,
-    })
+    }
+    use({ 'Wansmer/treesj', requires = { 'nvim-treesitter' } })
     use('f-person/git-blame.nvim')
-    use { "akinsho/toggleterm.nvim", tag = '*', config = function()
-        require("toggleterm").setup()
-    end }
+    use { "akinsho/toggleterm.nvim", tag = '*', config = function() require("toggleterm").setup() end }
+    use { "windwp/nvim-autopairs", config = function() require("nvim-autopairs").setup {} end }
+    use { 'numToStr/Comment.nvim' }
+    use { 'lewis6991/gitsigns.nvim' }
 end)

@@ -18,9 +18,9 @@ local config = {
         c = { "<cmd>BufferKill<cr>", "Close Buffer" },
         e = { "<cmd>Ex<cr>", "Explorer" },
         h = { [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], "Replace all" },
-        p = { "\"_dP", "Paste without copy" },
         q = { "<cmd>q!<cr>", "Quit" },
         w = { "<cmd>up<cr>", "Save" },
+        ["/"] = { "<Plug>(comment_toggle_linewise_current)", "Comment toggle current line" },
         b = {
             name = "Buffer",
             j = { "<cmd>BufferLinePick<cr>", "Jump" },
@@ -32,16 +32,18 @@ local config = {
             name = "Finder",
             f = { "<cmd>lua require('telescope.builtin').find_files()<cr>", "Files" },
             g = { "<cmd>lua require('telescope.builtin').git_files()<cr>", "Git Files" },
-            s = {
-                function()
-                    require('telescope.builtin')
-                        .grep_string({ search = vim.fn.input("Grep > ") })
-                end,
-                "Search"
-            }
+            s = { function() require('telescope.builtin').grep_string({ search = vim.fn.input("Grep > ") }) end, "Search" }
         },
         g = {
             name = "Git",
+            g = { "<cmd>lua require('gitsigns').next_hunk()<CR>", "Next hunk" },
+            G = { "<cmd>lua require('gitsigns').prev_hunk()<CR>", "Previous hunk" },
+            p = { "<cmd>lua require('gitsigns').preview_hunk()<CR>", "Preview hunk" },
+            r = { "<cmd>lua require('gitsigns').reset_hunk()<CR>", "Reset hunk" },
+            R = { "<cmd>lua require('gitsigns').reset_buffer()<CR>", "Reset buffer" },
+            s = { "<cmd>lua require('gitsigns').stage_hunk()<CR>", "Stage hunk" },
+            S = { "<cmd>lua require('gitsigns').undo_stage_hunk()<CR>", "Undo stage hunk" },
+
             l = { "<cmd>GitBlameOpenFileURL<cr>", "Open line url" },
             c = { "<cmd>GitBlameOpenCommitURL<cr>", "Open commit url" },
             C = { "<cmd>GitBlameCopySHA<cr>", "Copy commit SHA" },
@@ -67,7 +69,7 @@ local config = {
         },
         u = {
             name = "Utilities",
-            j = { "<cmd>TSJToggle<cr>", "Toggle Splitting & Joining" },
+            j = { "<cmd>lua require('treesj').toggle()<cr>", "Toggle Splitting & Joining" },
             u = { "<cmd>UndotreeToggle<cr>", "Undo" },
         },
         v = {
