@@ -38,7 +38,6 @@ local config = {
         },
         g = {
             name = "Git",
-            d = { "<cmd>lua require('gitsigns').diffthis()<cr>", "Diff" },
             g = { "<cmd>lua require('gitsigns').next_hunk()<cr>", "Next hunk" },
             G = { "<cmd>lua require('gitsigns').prev_hunk()<cr>", "Previous hunk" },
             p = { "<cmd>lua require('gitsigns').preview_hunk()<cr>", "Preview hunk" },
@@ -46,6 +45,11 @@ local config = {
             R = { "<cmd>lua require('gitsigns').reset_buffer()<cr>", "Reset buffer" },
             s = { "<cmd>lua require('gitsigns').stage_hunk()<cr>", "Stage hunk" },
             S = { "<cmd>lua require('gitsigns').undo_stage_hunk()<cr>", "Undo stage hunk" },
+
+            f = { ":DiffviewFileHistory %<CR>", "File history %" },
+            F = { ":DiffviewFileHistory<CR>", "File history" },
+            d = { ":DiffviewOpen<CR>", "Git diff" },
+            q = { ":DiffviewClose<CR>", "Close Git diff" },
 
             l = { "<cmd>GitBlameOpenFileURL<cr>", "Open line url" },
             c = { "<cmd>GitBlameOpenCommitURL<cr>", "Open commit url" },
