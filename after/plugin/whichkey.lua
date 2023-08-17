@@ -38,7 +38,7 @@ local config = {
         },
         g = {
             name = "Git",
-            d = { "<cmd>lua require('gitsigns').diffthis()<cr>", "" },
+            d = { "<cmd>lua require('gitsigns').diffthis()<cr>", "Diff" },
             g = { "<cmd>lua require('gitsigns').next_hunk()<cr>", "Next hunk" },
             G = { "<cmd>lua require('gitsigns').prev_hunk()<cr>", "Previous hunk" },
             p = { "<cmd>lua require('gitsigns').preview_hunk()<cr>", "Preview hunk" },
