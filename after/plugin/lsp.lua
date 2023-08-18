@@ -1,15 +1,17 @@
-local lsp = require('lsp-zero').preset({"recommended"})
+local lsp = require('lsp-zero').preset({ "recommended" })
 
 lsp.ensure_installed({
     'tsserver',
     'eslint',
     'rust_analyzer',
+    'gopls',
+    'eslint',
 })
 
 lsp.on_attach(function(client, bufnr)
-  -- see :help lsp-zero-keybindings
-  -- to learn the available actions
-  lsp.default_keymaps({buffer = bufnr})
+    -- see :help lsp-zero-keybindings
+    -- to learn the available actions
+    lsp.default_keymaps({ buffer = bufnr })
 end)
 
 -- (Optional) Configure lua language server for neovim
@@ -23,7 +25,7 @@ local cmp = require('cmp')
 cmp.setup({
     mapping = {
         -- `Enter` key to confirm completion
-        ['<CR>'] = cmp.mapping.confirm({select = false}),
+        ['<CR>'] = cmp.mapping.confirm({ select = false }),
 
         -- Ctrl+Space to trigger completion menu
         ['<C-Space>'] = cmp.mapping.complete(),

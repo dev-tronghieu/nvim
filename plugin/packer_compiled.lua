@@ -201,11 +201,6 @@ _G.packer_plugins = {
     path = "/Users/macbookpro/.local/share/nvim/site/pack/packer/start/undotree",
     url = "https://github.com/mbbill/undotree"
   },
-  vimtex = {
-    loaded = true,
-    path = "/Users/macbookpro/.local/share/nvim/site/pack/packer/start/vimtex",
-    url = "https://github.com/lervag/vimtex"
-  },
   ["which-key.nvim"] = {
     config = { "\27LJ\2\nD\0\0\2\0\4\0\t6\0\0\0009\0\1\0+\1\2\0=\1\2\0006\0\0\0009\0\1\0)\1d\0=\1\3\0K\0\1\0\15timeoutlen\ftimeout\6o\bvim\0" },
     loaded = true,
