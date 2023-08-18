@@ -19,7 +19,6 @@ local config = {
         ["."] = { "<cmd>BufferLineCycleNext<cr>", "Next Buffer" },
         ["/"] = { "<Plug>(comment_toggle_linewise_current)", "Comment toggle current line" },
         e = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
-        E = { "<cmd>Ex<cr>", "Explorer" },
         h = { [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], "Replace all" },
         q = { "<cmd>q!<cr>", "Quit" },
         s = { "<cmd>up<cr>", "Save" },
@@ -68,6 +67,10 @@ local config = {
             D = { "<cmd>Telescope lsp_type_definitions<cr>", "Type definitions" },
             s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
         },
+        p = {
+            name = "Pandoc",
+            p = { "<cmd>!pandoc -o %:r.pdf %<cr><cr>", "To PDF" },
+        },
         t = {
             name = "Terminal",
             f = { "<cmd>ToggleTerm direction=float<cr>", "Terminal float" },
@@ -77,6 +80,7 @@ local config = {
         u = {
             name = "Utilities",
             j = { "<cmd>lua require('treesj').toggle()<cr>", "Toggle Splitting & Joining" },
+            o = { "<cmd>!open %<cr><cr>", "Open with default app" },
             u = { "<cmd>UndotreeToggle<cr>", "Undo" },
         },
         v = {
@@ -86,10 +90,11 @@ local config = {
         },
         w = {
             name = "Window",
-            ["<Down>"] = { "<C-w>l", "Navigate down" },
-            ["<Left>"] = { "<C-w>h", "Navigate left" },
-            ["<Right>"] = { "<C-w>l", "Navigate right" },
-            ["<Up>"] = { "<C-w>k", "Navigate up" },
+            ["j"] = { "<C-w>j", "Navigate down" },
+            [","] = { "<C-w>h", "Navigate left" },
+            ["."] = { "<C-w>l", "Navigate right" },
+            ["k"] = { "<C-w>k", "Navigate up" },
+            ["w"] = { "<C-w>w", "Navigate next" },
         },
     },
 }
