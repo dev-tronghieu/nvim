@@ -34,6 +34,7 @@ local config = {
             m = { ":MarkdownPreviewToggle<cr>", "Markdown Toggle" },
             M = { ":MarkdownPreviewStop<cr>", "Markdown Close" },
             p = { "<cmd>!pandoc -o %:r.pdf %<cr><cr>", "To PDF" },
+            P = { "<cmd>!pandoc -o %:r.pdf %<cr>", "To PDF cmd" },
         },
         f = {
             name = "Finder",
