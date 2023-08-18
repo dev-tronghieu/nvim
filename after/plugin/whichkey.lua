@@ -32,8 +32,8 @@ local config = {
         },
         f = {
             name = "Finder",
-            f = { "<cmd>lua require('telescope.builtin').find_files()<cr>", "Files" },
-            g = { "<cmd>lua require('telescope.builtin').git_files()<cr>", "Git Files" },
+            a = { "<cmd>lua require('telescope.builtin').find_files()<cr>", "Files" },
+            f = { "<cmd>lua require('telescope.builtin').git_files()<cr>", "Git Files" },
             s = { function() require('telescope.builtin').grep_string({ search = vim.fn.input("Grep > ") }) end, "Search" }
         },
         g = {
