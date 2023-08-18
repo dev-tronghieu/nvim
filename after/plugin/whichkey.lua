@@ -29,6 +29,12 @@ local config = {
             P = { "<cmd>BufferLinePickClose<cr>", "Pick Close" },
             C = { "<cmd>BufferLineCloseOthers<cr>", "Close others" },
         },
+        d = {
+            name = "Document",
+            m = { ":MarkdownPreviewToggle<cr>", "Markdown Toggle" },
+            M = { ":MarkdownPreviewStop<cr>", "Markdown Close" },
+            p = { "<cmd>!pandoc -o %:r.pdf %<cr><cr>", "To PDF" },
+        },
         f = {
             name = "Finder",
             a = { "<cmd>lua require('telescope.builtin').find_files()<cr>", "Files" },
@@ -66,10 +72,6 @@ local config = {
             d = { "<cmd>Telescope lsp_definitions<cr>", "Definitions" },
             D = { "<cmd>Telescope lsp_type_definitions<cr>", "Type definitions" },
             s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
-        },
-        p = {
-            name = "Pandoc",
-            p = { "<cmd>!pandoc -o %:r.pdf %<cr><cr>", "To PDF" },
         },
         t = {
             name = "Terminal",
