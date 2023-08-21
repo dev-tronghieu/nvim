@@ -17,7 +17,6 @@ local config = {
     maps = {
         [","] = { "<cmd>BufferLineCyclePrev<cr>", "Prev Buffer" },
         ["."] = { "<cmd>BufferLineCycleNext<cr>", "Next Buffer" },
-        ["/"] = { "<Plug>(comment_toggle_linewise_current)", "Comment toggle current line" },
         e = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
         h = { [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], "Replace all" },
         q = { "<cmd>q!<cr>", "Quit" },
