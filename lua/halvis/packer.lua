@@ -72,11 +72,6 @@ return require('packer').startup(function(use)
 
     use "github/copilot.vim"
 
-    -- install without yarn or npm
-    use({
-        "iamcco/markdown-preview.nvim",
-        run = function() vim.fn["mkdp#util#install"]() end,
-    })
     use({
         "iamcco/markdown-preview.nvim",
         run = "cd app && npm install",
@@ -85,4 +80,6 @@ return require('packer').startup(function(use)
     })
 
     use('mg979/vim-visual-multi')
+
+    use('jose-elias-alvarez/null-ls.nvim')
 end)
