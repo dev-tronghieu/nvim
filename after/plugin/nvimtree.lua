@@ -5,7 +5,7 @@ vim.g.loaded_netrwPlugin = 1
 -- set termguicolors to enable highlight groups
 vim.opt.termguicolors = true
 
--- Note:
+-- note:
 -- normal H toggles dotfiles
 -- normal I toggles gitignore
 
