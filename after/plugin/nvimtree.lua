@@ -5,6 +5,10 @@ vim.g.loaded_netrwPlugin = 1
 -- set termguicolors to enable highlight groups
 vim.opt.termguicolors = true
 
+-- Note:
+-- normal H toggles dotfiles
+-- normal I toggles gitignore
+
 require("nvim-tree").setup({
     sort_by = "case_sensitive",
     view = {
@@ -14,6 +18,9 @@ require("nvim-tree").setup({
         group_empty = true,
     },
     filters = {
-        dotfiles = true,
+        dotfiles = false,
+    },
+    diagnostics = {
+        enable = true,
     },
 })
