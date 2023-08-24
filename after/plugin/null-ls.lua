@@ -6,11 +6,12 @@ null_ls.setup({
         null_ls.builtins.formatting.stylua,
         null_ls.builtins.diagnostics.eslint,
         null_ls.builtins.completion.spell,
+        null_ls.builtins.diagnostics.stylelint,
 
         -- golang
         -- note: remember to install these tools
         null_ls.builtins.formatting.gofmt,
-        null_ls.builtins.formatting.goimports_reviser,  -- https://github.com/incu6us/goimports-reviser
+        null_ls.builtins.formatting.goimports_reviser, -- https://github.com/incu6us/goimports-reviser
     },
     on_attach = function(client, bufnr)
         if client.supports_method("textDocument/formatting") then
