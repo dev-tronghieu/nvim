@@ -50,6 +50,8 @@ return require('packer').startup(function(use)
 
     use { "windwp/nvim-autopairs", config = function() require("nvim-autopairs").setup {} end }
 
+    use { "windwp/nvim-ts-autotag", config = function() require("nvim-ts-autotag").setup() end }
+
     use { 'numToStr/Comment.nvim' }
 
     use { 'lewis6991/gitsigns.nvim' }
@@ -82,4 +84,6 @@ return require('packer').startup(function(use)
     use('mg979/vim-visual-multi')
 
     use('jose-elias-alvarez/null-ls.nvim')
+
+    use { 'norcalli/nvim-colorizer.lua', config = function() require('colorizer').setup() end }
 end)
