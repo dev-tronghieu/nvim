@@ -6,6 +6,9 @@ lsp.ensure_installed({
     'rust_analyzer',
     'gopls',
     'eslint',
+    'html',
+    'cssls',
+    'svelte',
 })
 
 lsp.on_attach(function(client, bufnr)
@@ -33,6 +36,9 @@ require('lspconfig').gopls.setup {
         },
     },
 }
+require('lspconfig').html.setup{}
+require('lspconfig').cssls.setup{}
+require('lspconfig').svelte.setup{}
 
 lsp.setup()
 
