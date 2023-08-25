@@ -65,6 +65,7 @@ local config = {
             a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
             e = { "<cmd>Telescope diagnostics bufnr=0<cr>", "Document Dianogstics" },
             f = { "<cmd>lua vim.lsp.buf.format({async = false, timeout_ms = 10000})<cr>", "Format" },
+            F = { "<cmd>Prettier<cr>", "Prettier" },
             k = { "<cmd>lua vim.lsp.buf.hover()<cr>", "Hover" },
             r = { "<cmd>lua vim.lsp.buf.rename()<cr>", "Rename" },
             i = { "<cmd>Telescope lsp_references<cr>", "References" },
