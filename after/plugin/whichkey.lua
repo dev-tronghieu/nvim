@@ -23,6 +23,7 @@ local config = {
         s = { "<cmd>up<cr>", "Save" },
         b = {
             name = "Buffer",
+            k = { "<cmd>bd<cr>", "Kill" },
             r = { "<cmd>BufferLineSortByDirectory<cr>", "Re-ordering" },
             p = { "<cmd>BufferLinePick<cr>", "Pick" },
             P = { "<cmd>BufferLinePickClose<cr>", "Pick Close" },
