@@ -82,6 +82,7 @@ local config = {
         },
         u = {
             name = "Utilities",
+            a = { "<cmd>%y+<cr>", "Copy all" },
             j = { "<cmd>lua require('treesj').toggle()<cr>", "Toggle Splitting & Joining" },
             o = { "<cmd>!open %<cr><cr>", "Open with default app" },
             u = { "<cmd>UndotreeToggle<cr>", "Undo" },
