@@ -10,6 +10,7 @@ opt.completeopt = 'menuone,noinsert,noselect'  -- Autocomplete options
 opt.hlsearch = false
 opt.incsearch = true
 opt.scrolloff = 8
+opt.fillchars = { eob = " " }
 
 -----------------------------------------------------------
 -- Neovim UI

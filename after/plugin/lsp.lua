@@ -1,7 +1,7 @@
 local lsp = require('lsp-zero').preset({ "recommended" })
 
 lsp.ensure_installed({
-    'tsserver',
+    -- 'tsserver',
     'eslint',
     'rust_analyzer',
     'gopls',

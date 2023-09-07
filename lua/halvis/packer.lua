@@ -88,4 +88,12 @@ return require('packer').startup(function(use)
     use { 'MunifTanjim/prettier.nvim' }
 
     use { 'norcalli/nvim-colorizer.lua', config = function() require('colorizer').setup() end }
+
+    use {
+        "pmizio/typescript-tools.nvim",
+        requires = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+        config = function()
+            require("typescript-tools").setup {}
+        end,
+    }
 end)
